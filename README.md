@@ -24,12 +24,13 @@
         . libiconv.tbd
         . libstdc++.6.0.9.tbd
         . libz.tbd
+4. Targets -> Build Settings -> Other Linker Flags 增加值-ObjC
 
-4. 拖拽FrameWorks到您的项目中。<br/>
+5. 拖拽FrameWorks到您的项目中。<br/>
 
-5. 拖拽CoreEaseMob到您的项目中。<br/>
+6. 拖拽CoreEaseMob到您的项目中。<br/>
 
-6. Command + B编译通过，在AppDelegate复制以下代码测试，如果打印成功则集成成功。
+7. Command + B编译通过，在AppDelegate复制以下代码测试，如果打印成功则集成成功。
 
         
             [[EaseMob sharedInstance] registerSDKWithAppKey:@"easemob-demo#chatdemoui" apnsCertName:@"chatdemoui_dev"];
