@@ -24,7 +24,7 @@
         . libz.tbd
 
 4. 拖拽FrameWorks到您的项目中。<br/>
-5. 
+
 5. 拖拽CoreEaseMob到您的项目中。<br/>
 
 6. Command + B编译通过，在AppDelegate复制以下代码测试，如果打印成功则集成成功。
