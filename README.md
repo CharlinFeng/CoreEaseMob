@@ -31,16 +31,16 @@
 
 6. Command + B编译通过，在AppDelegate复制以下代码测试，如果打印成功则集成成功。
 
-
-    [[EaseMob sharedInstance] registerSDKWithAppKey:@"easemob-demo#chatdemoui" apnsCertName:@"chatdemoui_dev"];
-    [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:@"charlin" password:@"841120" completion:^(NSDictionary *loginInfo, EMError *error) {
-        NSLog(@"登陆成功：%@",loginInfo);
         
-    } onQueue:nil];
+            [[EaseMob sharedInstance] registerSDKWithAppKey:@"easemob-demo#chatdemoui" apnsCertName:@"chatdemoui_dev"];
+            [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:@"charlin" password:@"841120" completion:^(NSDictionary *loginInfo, EMError *error) {
+                NSLog(@"登陆成功：%@",loginInfo);
+                
+            } onQueue:nil];
 
 
 <br/><br/><br/>
 
-二、群聊,实时语音，实时视频
+二、群聊, 实时语音, 实时视频
 ==========
 更新中，敬请期待！
