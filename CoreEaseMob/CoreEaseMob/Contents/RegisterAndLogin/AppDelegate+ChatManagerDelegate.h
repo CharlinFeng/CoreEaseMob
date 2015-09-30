@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "EaseMob.h"
 
 @interface AppDelegate (ChatManagerDelegate)<IChatManagerDelegate>
 

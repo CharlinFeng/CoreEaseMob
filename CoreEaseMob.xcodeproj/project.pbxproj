@@ -117,6 +117,14 @@
 		89B43D6A1BBBCB97009196B3 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B43D0A1BBBCB97009196B3 /* NSObject+MJKeyValue.m */; settings = {ASSET_TAGS = (); }; };
 		89B43D6B1BBBCB97009196B3 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B43D0C1BBBCB97009196B3 /* NSObject+MJProperty.m */; settings = {ASSET_TAGS = (); }; };
 		89B43D6C1BBBCB97009196B3 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B43D0E1BBBCB97009196B3 /* NSString+MJExtension.m */; settings = {ASSET_TAGS = (); }; };
+		89B43DDD1BBBDA41009196B3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B43DDC1BBBDA41009196B3 /* CFNetwork.framework */; };
+		89B43DDF1BBBDA48009196B3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B43DDE1BBBDA48009196B3 /* MobileCoreServices.framework */; };
+		89B43DE11BBBDA50009196B3 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B43DE01BBBDA50009196B3 /* libxml2.tbd */; };
+		89B43DE31BBBDA58009196B3 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B43DE21BBBDA58009196B3 /* libresolv.tbd */; };
+		89B43DE51BBBDA5F009196B3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B43DE41BBBDA5F009196B3 /* libsqlite3.tbd */; };
+		89B43DE71BBBDA66009196B3 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B43DE61BBBDA66009196B3 /* libiconv.tbd */; };
+		89B43DE91BBBDA6E009196B3 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B43DE81BBBDA6E009196B3 /* libstdc++.6.0.9.tbd */; };
+		89B43DEB1BBBDA75009196B3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B43DEA1BBBDA75009196B3 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -334,6 +342,14 @@
 		89B43D0C1BBBCB97009196B3 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
 		89B43D0D1BBBCB97009196B3 /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
 		89B43D0E1BBBCB97009196B3 /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		89B43DDC1BBBDA41009196B3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		89B43DDE1BBBDA48009196B3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		89B43DE01BBBDA50009196B3 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		89B43DE21BBBDA58009196B3 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		89B43DE41BBBDA5F009196B3 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		89B43DE61BBBDA66009196B3 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		89B43DE81BBBDA6E009196B3 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		89B43DEA1BBBDA75009196B3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +357,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89B43DEB1BBBDA75009196B3 /* libz.tbd in Frameworks */,
+				89B43DE91BBBDA6E009196B3 /* libstdc++.6.0.9.tbd in Frameworks */,
+				89B43DE71BBBDA66009196B3 /* libiconv.tbd in Frameworks */,
+				89B43DE51BBBDA5F009196B3 /* libsqlite3.tbd in Frameworks */,
+				89B43DE31BBBDA58009196B3 /* libresolv.tbd in Frameworks */,
+				89B43DE11BBBDA50009196B3 /* libxml2.tbd in Frameworks */,
+				89B43DDF1BBBDA48009196B3 /* MobileCoreServices.framework in Frameworks */,
+				89B43DDD1BBBDA41009196B3 /* CFNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,14 +392,6 @@
 			children = (
 				89B43BFD1BBBCB8B009196B3 /* CoreEaseMob */,
 				89B43C271BBBCB97009196B3 /* Frameworks */,
-				89B43BE91BBBCB60009196B3 /* AppDelegate.h */,
-				89B43BEA1BBBCB60009196B3 /* AppDelegate.m */,
-				89B43BEC1BBBCB60009196B3 /* ViewController.h */,
-				89B43BED1BBBCB60009196B3 /* ViewController.m */,
-				89B43BEF1BBBCB60009196B3 /* Main.storyboard */,
-				89B43BF21BBBCB60009196B3 /* Assets.xcassets */,
-				89B43BF41BBBCB60009196B3 /* LaunchScreen.storyboard */,
-				89B43BF71BBBCB60009196B3 /* Info.plist */,
 				89B43BE61BBBCB60009196B3 /* Supporting Files */,
 			);
 			path = CoreEaseMob;
@@ -384,6 +400,22 @@
 		89B43BE61BBBCB60009196B3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				89B43BE91BBBCB60009196B3 /* AppDelegate.h */,
+				89B43BEA1BBBCB60009196B3 /* AppDelegate.m */,
+				89B43BEC1BBBCB60009196B3 /* ViewController.h */,
+				89B43BED1BBBCB60009196B3 /* ViewController.m */,
+				89B43BEF1BBBCB60009196B3 /* Main.storyboard */,
+				89B43BF21BBBCB60009196B3 /* Assets.xcassets */,
+				89B43BF41BBBCB60009196B3 /* LaunchScreen.storyboard */,
+				89B43BF71BBBCB60009196B3 /* Info.plist */,
+				89B43DEA1BBBDA75009196B3 /* libz.tbd */,
+				89B43DE81BBBDA6E009196B3 /* libstdc++.6.0.9.tbd */,
+				89B43DE61BBBDA66009196B3 /* libiconv.tbd */,
+				89B43DE41BBBDA5F009196B3 /* libsqlite3.tbd */,
+				89B43DE21BBBDA58009196B3 /* libresolv.tbd */,
+				89B43DE01BBBDA50009196B3 /* libxml2.tbd */,
+				89B43DDE1BBBDA48009196B3 /* MobileCoreServices.framework */,
+				89B43DDC1BBBDA41009196B3 /* CFNetwork.framework */,
 				89B43BE71BBBCB60009196B3 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -1360,6 +1392,11 @@
 				INFOPLIST_FILE = CoreEaseMob/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CoreEaseMob/Frameworks/EaseMobSDK/lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.Charlin.CoreEaseMob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1372,6 +1409,11 @@
 				INFOPLIST_FILE = CoreEaseMob/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CoreEaseMob/Frameworks/EaseMobSDK/lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.Charlin.CoreEaseMob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

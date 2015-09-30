@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "EaseMob.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+   
+    [[EaseMob sharedInstance] registerSDKWithAppKey:@"easemob-demo#chatdemoui" apnsCertName:@"chatdemoui_dev"];
+    [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:@"charlin" password:@"841120" completion:^(NSDictionary *loginInfo, EMError *error) {
+        NSLog(@"登陆成功：%@",loginInfo);
+        
+    } onQueue:nil];
+    
+    
+    
     return YES;
 }
 
