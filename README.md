@@ -1,3 +1,4 @@
+<br/><br/><br/>
 环信
 ==========
 
@@ -10,9 +11,9 @@
 <br/><br/><br/>
 一、环信导入
 ==========
-1. 到官网[http://www.easemob.com/downloads](http://www.easemob.com/downloads)下载最新SDK<br/>
+1. 到官网[http://www.easemob.com/downloads](http://www.easemob.com/downloads)下载`最新SDK`<br/>
 
-2. 下载后，删除Lib文件夹中的libEaseMobClientSDKLite.a，并拖拽Lib到项目中。<br/>
+2. 下载后，删除`Lib文件夹`中的`libEaseMobClientSDKLite.a`，并拖拽`Lib文件夹`到项目中。<br/>
 
 3. 添加以下依赖库<br/>
 
@@ -24,11 +25,11 @@
         . libiconv.tbd
         . libstdc++.6.0.9.tbd
         . libz.tbd
-4. Targets -> Build Settings -> Other Linker Flags 增加值-ObjC
+4. Targets -> Build Settings -> Other Linker Flags 增加值`-ObjC`
 
-5. 拖拽FrameWorks到您的项目中。<br/>
+5. 拖拽`FrameWorks`到您的项目中。<br/>
 
-6. 拖拽CoreEaseMob到您的项目中。<br/>
+6. 拖拽`CoreEaseMob`到您的项目中。<br/>
 
 7. Command + B编译通过，在AppDelegate复制以下代码测试，如果打印成功则集成成功。
 
