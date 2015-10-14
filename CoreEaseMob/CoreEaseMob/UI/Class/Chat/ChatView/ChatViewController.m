@@ -53,6 +53,8 @@
     
     NSMutableArray *_messages;
     BOOL _isScrollToBottom;
+    
+    AVAudioPlayer *_ringPlayer;
 }
 
 @property (nonatomic) BOOL isChatGroup;
@@ -359,6 +361,11 @@
     if (_imagePicker)
     {
         [_imagePicker dismissViewControllerAnimated:NO completion:nil];
+    }
+    
+    if (_ringPlayer) {
+        [_ringPlayer stop];
+        _ringPlayer = nil;
     }
 }
 
@@ -1042,6 +1049,8 @@
             [self markMessagesAsRead:@[message]];
         }
     }
+    
+    [self _beginRing];
 }
 
 -(void)didReceiveCmdMessage:(EMMessage *)message
@@ -1087,8 +1096,34 @@
 }
 
 
+- (void)_beginRing
+{
+    [_ringPlayer stop];
+    
+    NSString *musicPath = [[NSBundle mainBundle] pathForResource:@"msgTritone" ofType:@"caf"];
+    NSURL *url = [[NSURL alloc] initFileURLWithPath:musicPath];
+    
+    _ringPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    [_ringPlayer setVolume:1];
+//    _ringPlayer.numberOfLoops = 1; //设置音乐播放次数  -1为一直循环
+    if([_ringPlayer prepareToPlay])
+    {
+        [_ringPlayer play]; //播放
+    }
+}
+
+- (void)_stopRing
+{
+    [_ringPlayer stop];
+}
+
+
+
 - (void)didReceiveOfflineMessages:(NSArray *)offlineMessages
 {
+    
+    [self _beginRing];
+    
     if (![offlineMessages count])
     {
         return;

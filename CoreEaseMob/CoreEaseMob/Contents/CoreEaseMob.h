@@ -8,7 +8,7 @@
 
 #define CoreHXAppkey @"896249676#testlan"
 #define CoreEaseMobInstance [CoreEaseMob sharedCoreEaseMob]
-
+#define EaseMobInstance [EaseMob sharedInstance]
 
 #import <Foundation/Foundation.h>
 #import "EaseMob.h"

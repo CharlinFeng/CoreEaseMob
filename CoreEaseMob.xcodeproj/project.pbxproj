@@ -457,6 +457,10 @@
 		89B43DEB1BBBDA75009196B3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B43DEA1BBBDA75009196B3 /* libz.tbd */; };
 		89B43E591BBBDBC3009196B3 /* libEaseMobClientSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B43E561BBBDBC3009196B3 /* libEaseMobClientSDK.a */; settings = {ASSET_TAGS = (); }; };
 		89B43E5A1BBBDBC3009196B3 /* EaseMob.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 89B43E581BBBDBC3009196B3 /* EaseMob.bundle */; settings = {ASSET_TAGS = (); }; };
+		89E50C421BCDFE4F00D75675 /* msg.caf in Resources */ = {isa = PBXBuildFile; fileRef = 89E50C3E1BCDFE4F00D75675 /* msg.caf */; settings = {ASSET_TAGS = (); }; };
+		89E50C431BCDFE4F00D75675 /* msgTritone.caf in Resources */ = {isa = PBXBuildFile; fileRef = 89E50C3F1BCDFE4F00D75675 /* msgTritone.caf */; settings = {ASSET_TAGS = (); }; };
+		89E50C441BCDFE4F00D75675 /* pushmsg.caf in Resources */ = {isa = PBXBuildFile; fileRef = 89E50C401BCDFE4F00D75675 /* pushmsg.caf */; settings = {ASSET_TAGS = (); }; };
+		89E50C451BCDFE4F00D75675 /* sendSuccess.caf in Resources */ = {isa = PBXBuildFile; fileRef = 89E50C411BCDFE4F00D75675 /* sendSuccess.caf */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1251,6 +1255,10 @@
 		89B43E541BBBDBC3009196B3 /* EMErrorDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMErrorDefs.h; sourceTree = "<group>"; };
 		89B43E561BBBDBC3009196B3 /* libEaseMobClientSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEaseMobClientSDK.a; sourceTree = "<group>"; };
 		89B43E581BBBDBC3009196B3 /* EaseMob.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EaseMob.bundle; sourceTree = "<group>"; };
+		89E50C3E1BCDFE4F00D75675 /* msg.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = msg.caf; sourceTree = "<group>"; };
+		89E50C3F1BCDFE4F00D75675 /* msgTritone.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = msgTritone.caf; sourceTree = "<group>"; };
+		89E50C401BCDFE4F00D75675 /* pushmsg.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pushmsg.caf; sourceTree = "<group>"; };
+		89E50C411BCDFE4F00D75675 /* sendSuccess.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sendSuccess.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1993,6 +2001,7 @@
 		8980B2C71BCBB869009C2C3E /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				89E50C3D1BCDFE4F00D75675 /* Sound */,
 				8980B2C81BCBB869009C2C3E /* ChatList */,
 				8980B2CD1BCBB869009C2C3E /* ChatView */,
 			);
@@ -3276,6 +3285,17 @@
 			path = resources;
 			sourceTree = "<group>";
 		};
+		89E50C3D1BCDFE4F00D75675 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				89E50C3E1BCDFE4F00D75675 /* msg.caf */,
+				89E50C3F1BCDFE4F00D75675 /* msgTritone.caf */,
+				89E50C401BCDFE4F00D75675 /* pushmsg.caf */,
+				89E50C411BCDFE4F00D75675 /* sendSuccess.caf */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3413,6 +3433,7 @@
 				8980B46C1BCBB86A009C2C3E /* sr_refresh.png in Resources */,
 				893425F51BCD0C05002DDB2D /* chatBar_colorMore_camera@2x.png in Resources */,
 				893425A51BCD0C05002DDB2D /* VoiceSearchFeedback008.png in Resources */,
+				89E50C451BCDFE4F00D75675 /* sendSuccess.caf in Resources */,
 				893425961BCD0C05002DDB2D /* chatListCellHead@2x.png in Resources */,
 				8934263F1BCD0C05002DDB2D /* tabbar_contactsHL@2x.png in Resources */,
 				8980AA731BCB921C009C2C3E /* ChatCell.xib in Resources */,
@@ -3449,6 +3470,7 @@
 				8934262D1BCD0C05002DDB2D /* titleBar@2x.png in Resources */,
 				893426001BCD0C05002DDB2D /* chatBar_more_camera@2x.png in Resources */,
 				893425981BCD0C05002DDB2D /* VoiceSearchFeedback001@2x.png in Resources */,
+				89E50C421BCDFE4F00D75675 /* msg.caf in Resources */,
 				893426061BCD0C05002DDB2D /* chatBar_more_locationSelected@2x.png in Resources */,
 				8934262E1BCD0C05002DDB2D /* group_creategroup@2x.png in Resources */,
 				89B43D1B1BBBCB97009196B3 /* checkMark@2x.png in Resources */,
@@ -3463,6 +3485,7 @@
 				8934260F1BCD0C05002DDB2D /* chat_receiver_audio_playing001@2x.png in Resources */,
 				893426321BCD0C05002DDB2D /* group_participant_add@2x.png in Resources */,
 				893426431BCD0C05002DDB2D /* tabbar_settingHL@2x.png in Resources */,
+				89E50C441BCDFE4F00D75675 /* pushmsg.caf in Resources */,
 				893425AA1BCD0C05002DDB2D /* VoiceSearchFeedback010@2x.png in Resources */,
 				89B43D561BBBCB97009196B3 /* SVP.bundle in Resources */,
 				893425DC1BCD0C05002DDB2D /* faceDelete@2x.png in Resources */,
@@ -3480,6 +3503,7 @@
 				893425C41BCD0C05002DDB2D /* call_silence@2x.png in Resources */,
 				893425B41BCD0C05002DDB2D /* VoiceSearchFeedback015@2x.png in Resources */,
 				893425D11BCD0C05002DDB2D /* chatBar_textBg.png in Resources */,
+				89E50C431BCDFE4F00D75675 /* msgTritone.caf in Resources */,
 				893425B11BCD0C05002DDB2D /* VoiceSearchFeedback014.png in Resources */,
 				893425C11BCD0C05002DDB2D /* call_out_h.png in Resources */,
 				893426421BCD0C05002DDB2D /* tabbar_settingHL.png in Resources */,
@@ -3814,7 +3838,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Minze Lan (92NGCC8X49)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Minze Lan (92NGCC8X49)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -3836,6 +3861,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "1f10c55e-071c-4c0d-a42f-29f7d74ee99e";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -3857,7 +3883,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Minze Lan (92NGCC8X49)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Minze Lan (92NGCC8X49)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -3872,6 +3899,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "1f10c55e-071c-4c0d-a42f-29f7d74ee99e";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -3881,8 +3909,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Minze Lan (92NGCC8X49)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Minze Lan (92NGCC8X49)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3900,9 +3928,9 @@
 					"$(PROJECT_DIR)/CoreEaseMob/CoreEaseMob/UI/3rdparty/VoiceConvert/opencore-amrwb",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.Charlin.CoreEaseMob2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Lishang.CoreEaseMob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "1f10c55e-071c-4c0d-a42f-29f7d74ee99e";
 			};
 			name = Debug;
 		};
@@ -3910,8 +3938,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Minze Lan (92NGCC8X49)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Minze Lan (92NGCC8X49)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3929,9 +3957,9 @@
 					"$(PROJECT_DIR)/CoreEaseMob/CoreEaseMob/UI/3rdparty/VoiceConvert/opencore-amrwb",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.Charlin.CoreEaseMob2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Lishang.CoreEaseMob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "1f10c55e-071c-4c0d-a42f-29f7d74ee99e";
 			};
 			name = Release;
 		};

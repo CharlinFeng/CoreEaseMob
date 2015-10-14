@@ -27,4 +27,12 @@
 +(void)appWillTerminate:(UIApplication *)application;
 
 
+/** 将得到的deviceToken传给SDK */
++(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken;
+
+
+/** 注册deviceToken失败 */
++(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error;
+
+
 @end

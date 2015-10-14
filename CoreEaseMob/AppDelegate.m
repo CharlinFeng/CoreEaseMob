@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "CoreEaseMobHeader.h"
 #import "AppDelegate+ChatManagerDelegate.h"
+#import "CoreSVP.h"
+
 
 @interface AppDelegate ()<IChatManagerDelegate>
 
@@ -45,5 +47,32 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     [CoreEaseMob appWillTerminate:application];
 }
+
+
+
+// 将得到的deviceToken传给SDK
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
+    [CoreEaseMob application:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+}
+
+// 注册deviceToken失败
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
+    [CoreEaseMob application:application didFailToRegisterForRemoteNotificationsWithError:error];
+    NSLog(@"error -- %@",error);
+}
+
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
+    
+    NSLog(@"==============!!!===========%@",userInfo);
+}
+
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
+    NSLog(@"==============!!!===========%@",userInfo);
+}
+
+
+
+
+
 
 @end

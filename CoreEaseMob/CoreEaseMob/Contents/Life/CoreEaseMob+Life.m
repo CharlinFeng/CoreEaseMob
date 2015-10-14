@@ -14,8 +14,11 @@
 
 /** 注册 */
 +(void)registerEaseMobSDK:(UIApplication *)application launchOptions:(NSDictionary *)launchOptions{
-    [[EaseMob sharedInstance] registerSDKWithAppKey:CoreHXAppkey apnsCertName:@"push"];
+    [[EaseMob sharedInstance] registerSDKWithAppKey:CoreHXAppkey apnsCertName:@"CoreEaseMob"];
     [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
+    
+    //注册推送
+    [self registerRemoteNotification];
 }
 
 
@@ -38,6 +41,46 @@
 +(void)appWillTerminate:(UIApplication *)application{
     [[EaseMob sharedInstance] applicationWillTerminate:application];
 }
+
+
+/** 注册推送 */
++(void)registerRemoteNotification{
+    UIApplication *application = [UIApplication sharedApplication];
+    application.applicationIconBadgeNumber = 0;
+    
+    if([application respondsToSelector:@selector(registerUserNotificationSettings:)])
+    {
+        UIUserNotificationType notificationTypes = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:notificationTypes categories:nil];
+        [application registerUserNotificationSettings:settings];
+    }
+    
+#if !TARGET_IPHONE_SIMULATOR
+    //iOS8 注册APNS
+    if ([application respondsToSelector:@selector(registerForRemoteNotifications)]) {
+        [application registerForRemoteNotifications];
+    }else{
+        UIRemoteNotificationType notificationTypes = UIRemoteNotificationTypeBadge |
+        UIRemoteNotificationTypeSound |
+        UIRemoteNotificationTypeAlert;
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:notificationTypes];
+    }
+#endif
+}
+
+
+/** 将得到的deviceToken传给SDK */
++(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
+    [EaseMobInstance application:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+}
+
+
+/** 注册deviceToken失败 */
++(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
+    
+    [EaseMobInstance application:application didFailToRegisterForRemoteNotificationsWithError:error];
+}
+
 
 
 

@@ -93,6 +93,8 @@
         _statusLabel.text = NSLocalizedString(@"call.connecting", @"Connecting...");
         [_actionView addSubview:_hangupButton];
     }
+    
+    [self _beginRing];
 }
 
 - (void)didReceiveMemoryWarning {
