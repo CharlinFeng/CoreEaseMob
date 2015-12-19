@@ -15,7 +15,8 @@
 #import "HostUserModel.h"
 #import "CoreAleetViewManagerVC.h"
 #import "ChatVC.h"
-#import "ChatViewController.h"
+#import "EaseUI.h"
+#import "GroupListVC.h"
 
 @interface FriendsListVC ()<IChatManagerDelegate>
 
@@ -30,14 +31,18 @@
     
     self.title = @"好友";
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"退出登陆" style:UIBarButtonItemStylePlain target:self action:@selector(loginOut)];
+    UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithTitle:@"退出登陆" style:UIBarButtonItemStylePlain target:self action:@selector(loginOut)];
+    
+    UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithTitle:@"群组列表" style:UIBarButtonItemStylePlain target:self action:@selector(groupListVC)];
+    
+    self.navigationItem.rightBarButtonItems = @[item1, item2    ];
+    
     
     SearchView *view = [SearchView searchView];
     
     self.navigationItem.titleView = view;
     
     view.SearchAction = ^(NSString *str){
-        
         
         if(str.length ==0 ){
             [CoreSVP showSVPWithType:CoreSVPTypeError Msg:@"请输入内容" duration:2.0 allowEdit:NO beginBlock:nil completeBlock:nil];
@@ -59,6 +64,15 @@
 
 -(void)dealloc{
     [CoreEaseMob removeChatManagerDelegate:self];
+}
+
+
+
+-(void)groupListVC{
+    
+    GroupListVC *glvc = [[GroupListVC alloc] init];
+    
+    [self.navigationController pushViewController:glvc animated:YES];
 }
 
 
@@ -174,11 +188,11 @@
         [CoreEaseMob fetchBuddyList:^(NSArray *buddyList) {
             
             if(buddyList.count == 0){
+                
                 [CoreSVP showSVPWithType:CoreSVPTypeSuccess Msg:@"0个好友" duration:1.0 allowEdit:NO beginBlock:nil completeBlock:nil];
             }
             
             self.dataList = buddyList;
-            
             
             [self.tableView reloadData];
             
@@ -212,7 +226,7 @@
     NSString *rid = @"FriendsListVC";
 
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:rid];
-
+    
     cell.textLabel.text = [self.dataList[indexPath.row] username];
 
     return cell;
@@ -223,11 +237,10 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     EMBuddy *buddy = self.dataList[indexPath.row];
+
+    EaseMessageViewController *chatController = [[EaseMessageViewController alloc] initWithConversationChatter:buddy.username conversationType:eConversationTypeChat];
     
-    ChatViewController *chatVC = [[ChatViewController alloc] initWithChatter:buddy.username isGroup:NO];
-    
-    [self.navigationController pushViewController:chatVC animated:YES];
-//    [self changeRel:indexPath];
+    [self.navigationController pushViewController:chatController animated:YES];
 }
 
 
@@ -283,7 +296,10 @@
 //            } errorBlock:nil];
 //            
 //        }
-//        
+//
+        
+        
+        
     }];
 
 }

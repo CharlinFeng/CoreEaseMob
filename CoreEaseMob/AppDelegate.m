@@ -11,7 +11,6 @@
 #import "AppDelegate+ChatManagerDelegate.h"
 #import "CoreSVP.h"
 
-
 @interface AppDelegate ()<IChatManagerDelegate>
 
 @end
@@ -24,6 +23,9 @@
     [CoreEaseMob registerEaseMobSDK:application launchOptions:launchOptions];
 
     [CoreEaseMob addChatManagerDelegate:self];
+    
+    [[EaseMob sharedInstance].callManager addDelegate:self delegateQueue:nil];
+
     
     return YES;
 }

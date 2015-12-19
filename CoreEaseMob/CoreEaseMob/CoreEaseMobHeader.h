@@ -31,5 +31,8 @@
 /** 发送消息 */
 #import "CoreEaseMob+Chat.h"
 
+/** 群组管理 */
+#import "CoreEaseMob+Group.h"
+
 
 #endif

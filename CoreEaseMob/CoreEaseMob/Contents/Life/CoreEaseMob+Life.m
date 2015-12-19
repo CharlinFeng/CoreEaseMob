@@ -7,15 +7,24 @@
 //
 
 #import "CoreEaseMob+Life.h"
-
+#import "EaseUI.h"
 
 @implementation CoreEaseMob (Life)
 
 
 /** 注册 */
 +(void)registerEaseMobSDK:(UIApplication *)application launchOptions:(NSDictionary *)launchOptions{
-    [[EaseMob sharedInstance] registerSDKWithAppKey:CoreHXAppkey apnsCertName:@"CoreEaseMob"];
+    
+    
+    
+    [[EaseMob sharedInstance] registerSDKWithAppKey:CoreHXAppkey apnsCertName:CoreCertName];
     [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
+    
+    [[EaseSDKHelper shareHelper] easemobApplication:application
+                      didFinishLaunchingWithOptions:launchOptions
+                                             appkey:CoreHXAppkey
+                                       apnsCertName:CoreCertName
+                                        otherConfig:@{kSDKConfigEnableConsoleLogger:[NSNumber numberWithBool:YES]}];
     
     //注册推送
     [self registerRemoteNotification];

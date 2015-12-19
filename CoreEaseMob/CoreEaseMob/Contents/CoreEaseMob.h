@@ -7,6 +7,7 @@
 //
 
 #define CoreHXAppkey @"896249676#testlan"
+#define CoreCertName @"CoreEaseMob"
 #define CoreEaseMobInstance [CoreEaseMob sharedCoreEaseMob]
 #define EaseMobInstance [EaseMob sharedInstance]
 
