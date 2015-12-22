@@ -33,6 +33,7 @@
 
 7. Command + B编译通过，在AppDelegate复制以下代码测试，如果打印成功则集成成功。
 
+#### OC版
         
             [[EaseMob sharedInstance] registerSDKWithAppKey:@"easemob-demo#chatdemoui" apnsCertName:@"chatdemoui_dev"];
             [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:@"charlin" password:@"841120" completion:^(NSDictionary *loginInfo, EMError *error) {
@@ -40,6 +41,16 @@
                 
             } onQueue:nil];
 
+
+
+#### Swift版
+
+        EaseMob.sharedInstance().registerSDKWithAppKey("easemob-demo#chatdemoui", apnsCertName: "chatdemoui_dev")
+        EaseMob.sharedInstance().chatManager.asyncLoginWithUsername("charlin", password: "841120", completion: { (loginInfo, error) -> Void in
+            
+            print("登陆成功")
+            
+        }, onQueue: nil)
 
 <br/><br/><br/>
 
